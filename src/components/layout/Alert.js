@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 
-const Alert = ({ alert }) => {
-    console.log(alert)
+const Alert = (alert) => {
+
+
     return (
             alert !==null && alert &&(
-                <div className={`toast alert alert-${alert.type}`}>
+                <div className={`toast alert alert-${alert.type}`} style={{"display":"none"}}>
                     {alert.msg}
                 </div>
             )
