@@ -1,5 +1,5 @@
 import React, { useState,Fragment } from "react";
-import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import { HashRouter as Router,Switch,Route } from 'react-router-dom';
 import "./app.css";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
@@ -77,7 +77,7 @@ const App = () => {
               {...props}
               />
             )} />
-            <Route component={NotFound}/>
+            <Route path="*" component={NotFound}/>
           </Switch>
         </div>
       </div>
